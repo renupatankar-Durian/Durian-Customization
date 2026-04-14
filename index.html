@@ -159,6 +159,20 @@
     .seq-code { padding: 10px 8px; font-family: 'system-ui', monospace; font-size: 12px; color: var(--text2); font-weight: 600; white-space: nowrap; }
     .seq-name { padding: 10px 14px 10px 4px; color: var(--text); font-size: 13px; }
 
+  
+    .seq-status { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; letter-spacing: .03em; white-space: nowrap; text-transform: uppercase; }
+    .seq-status-cont { background: #D6F0E0; color: #1A7A3A; border: 1px solid #A8DEC0; }
+    .seq-status-tsl  { background: #FEF0DC; color: #B05A10; border: 1px solid #F5D5A0; }
+    .seq-status-disc { background: #F5E0E0; color: #9A2020; border: 1px solid #E8C0C0; }
+    .seq-status-cell { padding: 8px 14px 8px 4px; }
+    .seq-table thead th:last-child { min-width: 110px; }
+
+    .seq-note-box { background: #F5F7FA; border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px; }
+    .seq-note-rule { font-size: 12.5px; color: var(--text); display: flex; align-items: center; gap: 8px; line-height: 1.5; }
+    .seq-note-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .seq-note-dot-cont { background: #2A9A50; }
+    .seq-note-dot-tsl  { background: #D07020; }
+
   </style>
 </head>
 <body>
@@ -199,80 +213,109 @@
     <div class="seq-intro">
       <p>Display order of physical colour samples present in-store, as of <strong>April 2026</strong>.</p>
     </div>
+    <div class="seq-note-box">
+      <div class="seq-note-rule"><span class="seq-note-dot seq-note-dot-cont"></span><strong>Continued colours</strong> must be displayed in the sequence given above.</div>
+      <div class="seq-note-rule"><span class="seq-note-dot seq-note-dot-tsl"></span><strong>Till Stock Lasts colours</strong> can be displayed while physical samples are available in the store.</div>
+    </div>
     <div class="seq-tables">
 
       <div class="seq-table-wrap">
         <div class="seq-table-header seq-leather-header">
-          <span class="seq-material-icon">🟤</span> Leather <span class="seq-count">&nbsp;11 samples</span>
+          <span class="seq-material-icon">🟤</span> Leather <span class="seq-count">&nbsp;13 samples</span>
         </div>
         <table class="seq-table">
-          <thead><tr><th>#</th><th>Swatch</th><th>Code</th><th>Name</th></tr></thead>
+          <thead><tr><th>#</th><th>Swatch</th><th>Code</th><th>Name</th><th>Status</th></tr></thead>
           <tbody>
           <tr>
             <td class="seq-num">1</td>
             <td><span class="seq-swatch" style="background:#D8C4A8;color:#555"></span></td>
             <td class="seq-code">PL-41</td>
             <td class="seq-name">Nude Beige</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">2</td>
             <td><span class="seq-swatch" style="background:#C0A070;color:#555"></span></td>
             <td class="seq-code">PL-35</td>
             <td class="seq-name">Dark Beige</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">3</td>
             <td><span class="seq-swatch" style="background:#A06838;color:#fff"></span></td>
             <td class="seq-code">PL-43</td>
             <td class="seq-name">Cognac Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">4</td>
             <td><span class="seq-swatch" style="background:#C08850;color:#555"></span></td>
             <td class="seq-code">PL-42</td>
             <td class="seq-name">Tuscan Tan</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">5</td>
             <td><span class="seq-swatch" style="background:#B07840;color:#fff"></span></td>
             <td class="seq-code">PL-33</td>
             <td class="seq-name">Natural Tan</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">6</td>
             <td><span class="seq-swatch" style="background:#6B1A2A;color:#fff"></span></td>
             <td class="seq-code">PL-40</td>
             <td class="seq-name">Maroon</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">7</td>
             <td><span class="seq-swatch" style="background:#8B2A2A;color:#fff"></span></td>
             <td class="seq-code">PL-37</td>
             <td class="seq-name">Brick Red</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">8</td>
             <td><span class="seq-swatch" style="background:#C0B8B8;color:#555"></span></td>
             <td class="seq-code">PL-36</td>
             <td class="seq-name">Frost Grey</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">9</td>
             <td><span class="seq-swatch" style="background:#6B7A3A;color:#fff"></span></td>
             <td class="seq-code">PL-39</td>
             <td class="seq-name">Natural Green</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">10</td>
             <td><span class="seq-swatch" style="background:#5A6A2A;color:#fff"></span></td>
             <td class="seq-code">PL-32</td>
             <td class="seq-name">Olive Green</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">11</td>
             <td><span class="seq-swatch" style="background:#1A3E5C;color:#fff"></span></td>
             <td class="seq-code">PL-38</td>
             <td class="seq-name">Ocean Blue</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">12</td>
+            <td><span class="seq-swatch" style="background:#3D1C08;color:#fff"></span></td>
+            <td class="seq-code">PL-24</td>
+            <td class="seq-name">Choco Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">13</td>
+            <td><span class="seq-swatch" style="background:#C8C0BC;color:#555"></span></td>
+            <td class="seq-code">PL-30</td>
+            <td class="seq-name">Light Grey</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           </tbody>
         </table>
@@ -280,76 +323,150 @@
 
       <div class="seq-table-wrap">
         <div class="seq-table-header seq-lette-header">
-          <span class="seq-material-icon">🔘</span> Leatherette <span class="seq-count">&nbsp;11 samples</span>
+          <span class="seq-material-icon">🔘</span> Leatherette <span class="seq-count">&nbsp;20 samples</span>
         </div>
         <table class="seq-table">
-          <thead><tr><th>#</th><th>Swatch</th><th>Code</th><th>Name</th></tr></thead>
+          <thead><tr><th>#</th><th>Swatch</th><th>Code</th><th>Name</th><th>Status</th></tr></thead>
           <tbody>
           <tr>
             <td class="seq-num">1</td>
             <td><span class="seq-swatch" style="background:#B8B0A8;color:#555"></span></td>
             <td class="seq-code">L-78</td>
             <td class="seq-name">Oyster Grey</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">2</td>
             <td><span class="seq-swatch" style="background:#708090;color:#fff"></span></td>
             <td class="seq-code">L-56</td>
             <td class="seq-name">Slate Grey</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">3</td>
             <td><span class="seq-swatch" style="background:#B0B0B0;color:#555"></span></td>
             <td class="seq-code">L-46</td>
             <td class="seq-name">Ash Grey</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">4</td>
             <td><span class="seq-swatch" style="background:#B89878;color:#555"></span></td>
             <td class="seq-code">L-48</td>
             <td class="seq-name">Mushroom Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">5</td>
             <td><span class="seq-swatch" style="background:#8A7A6A;color:#fff"></span></td>
             <td class="seq-code">L-84</td>
             <td class="seq-name">Dual Tone Grey Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">6</td>
             <td><span class="seq-swatch" style="background:#C4934E;color:#555"></span></td>
             <td class="seq-code">L-37</td>
             <td class="seq-name">Camel Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">7</td>
             <td><span class="seq-swatch" style="background:#A05230;color:#fff"></span></td>
             <td class="seq-code">L-61</td>
             <td class="seq-name">Cinnamon Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">8</td>
             <td><span class="seq-swatch" style="background:#5C3820;color:#fff"></span></td>
             <td class="seq-code">L-62</td>
             <td class="seq-name">Cocoa Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">9</td>
             <td><span class="seq-swatch" style="background:#6B7A4A;color:#fff"></span></td>
             <td class="seq-code">L-52</td>
             <td class="seq-name">Olive Green</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">10</td>
             <td><span class="seq-swatch" style="background:#1E4480;color:#fff"></span></td>
             <td class="seq-code">L-82</td>
             <td class="seq-name">Blue</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">11</td>
             <td><span class="seq-swatch" style="background:#1A1A1A;color:#fff"></span></td>
             <td class="seq-code">L-01</td>
             <td class="seq-name">Eerie Black</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">12</td>
+            <td><span class="seq-swatch" style="background:#2A4A7A;color:#fff"></span></td>
+            <td class="seq-code">L-33</td>
+            <td class="seq-name">Blue</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">13</td>
+            <td><span class="seq-swatch" style="background:#8B2A2A;color:#fff"></span></td>
+            <td class="seq-code">L-34</td>
+            <td class="seq-name">Crush Red</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">14</td>
+            <td><span class="seq-swatch" style="background:#8B1A1A;color:#fff"></span></td>
+            <td class="seq-code">L-49</td>
+            <td class="seq-name">Red</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">15</td>
+            <td><span class="seq-swatch" style="background:#D4A820;color:#555"></span></td>
+            <td class="seq-code">L-60</td>
+            <td class="seq-name">Yellow No 2</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">16</td>
+            <td><span class="seq-swatch" style="background:#A89878;color:#555"></span></td>
+            <td class="seq-code">L-77</td>
+            <td class="seq-name">Leatherette L-77</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">17</td>
+            <td><span class="seq-swatch" style="background:#D4C4A8;color:#555"></span></td>
+            <td class="seq-code">L-87</td>
+            <td class="seq-name">Dual Tone Beige</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">18</td>
+            <td><span class="seq-swatch" style="background:#C4A882;color:#555"></span></td>
+            <td class="seq-code">L-88</td>
+            <td class="seq-name">Dual Tone Dark Beige</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">19</td>
+            <td><span class="seq-swatch" style="background:#2A2A2A;color:#fff"></span></td>
+            <td class="seq-code">EXL-28</td>
+            <td class="seq-name">Black Basket Weave</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">20</td>
+            <td><span class="seq-swatch" style="background:#6B3C1C;color:#fff"></span></td>
+            <td class="seq-code">EXL-31</td>
+            <td class="seq-name">Glossy Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
           </tr>
           </tbody>
         </table>
@@ -357,106 +474,206 @@
 
       <div class="seq-table-wrap seq-table-fabric">
         <div class="seq-table-header seq-fabric-header">
-          <span class="seq-material-icon">🟦</span> Fabric <span class="seq-count">&nbsp;16 samples</span>
+          <span class="seq-material-icon">🟦</span> Fabric <span class="seq-count">&nbsp;28 samples</span>
         </div>
         <table class="seq-table">
-          <thead><tr><th>#</th><th>Swatch</th><th>Code</th><th>Name</th></tr></thead>
+          <thead><tr><th>#</th><th>Swatch</th><th>Code</th><th>Name</th><th>Status</th></tr></thead>
           <tbody>
           <tr>
             <td class="seq-num">1</td>
             <td><span class="seq-swatch" style="background:#C8C3BA;color:#555"></span></td>
             <td class="seq-code">F-53</td>
             <td class="seq-name">Stone Grey</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">2</td>
             <td><span class="seq-swatch" style="background:#1B3B6E;color:#fff"></span></td>
             <td class="seq-code">F-58</td>
             <td class="seq-name">Imperial Blue</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
           </tr>
           <tr>
             <td class="seq-num">3</td>
             <td><span class="seq-swatch" style="background:#1A2680;color:#fff"></span></td>
             <td class="seq-code">F-61</td>
             <td class="seq-name">Midnight Blue</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
           </tr>
           <tr>
             <td class="seq-num">4</td>
             <td><span class="seq-swatch" style="background:#7B5135;color:#fff"></span></td>
             <td class="seq-code">F-74</td>
             <td class="seq-name">Cigar Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
           </tr>
           <tr>
             <td class="seq-num">5</td>
             <td><span class="seq-swatch" style="background:#7B5135;color:#fff"></span></td>
             <td class="seq-code">F-75</td>
             <td class="seq-name">Cigar Brown Quilted</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
           </tr>
           <tr>
             <td class="seq-num">6</td>
             <td><span class="seq-swatch" style="background:#F0EBD7;color:#555"></span></td>
             <td class="seq-code">F-76</td>
             <td class="seq-name">Daisy White</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
           </tr>
           <tr>
             <td class="seq-num">7</td>
             <td><span class="seq-swatch" style="background:#F0EBD7;color:#555"></span></td>
             <td class="seq-code">F-77</td>
             <td class="seq-name">Daisy White Quilted</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
           </tr>
           <tr>
             <td class="seq-num">8</td>
             <td><span class="seq-swatch" style="background:#8C9494;color:#555"></span></td>
             <td class="seq-code">F-79</td>
             <td class="seq-name">Storm Grey Quilted</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
           </tr>
           <tr>
             <td class="seq-num">9</td>
             <td><span class="seq-swatch" style="background:#2E8B87;color:#fff"></span></td>
             <td class="seq-code">F-81</td>
             <td class="seq-name">Teal Blue Quilted</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
           </tr>
           <tr>
             <td class="seq-num">10</td>
             <td><span class="seq-swatch" style="background:#888B8D;color:#fff"></span></td>
             <td class="seq-code">F-96</td>
             <td class="seq-name">Flint Grey</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
           </tr>
           <tr>
             <td class="seq-num">11</td>
             <td><span class="seq-swatch" style="background:#C4C8CC;color:#555"></span></td>
             <td class="seq-code">F-102</td>
             <td class="seq-name">Ice Grey</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">12</td>
             <td><span class="seq-swatch" style="background:#D4B87A;color:#555"></span></td>
             <td class="seq-code">F-103</td>
             <td class="seq-name">Honey Beige</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">13</td>
             <td><span class="seq-swatch" style="background:#7A5C38;color:#fff"></span></td>
             <td class="seq-code">F-140</td>
             <td class="seq-name">Dual Tone Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">14</td>
             <td><span class="seq-swatch" style="background:#C8B078;color:#555"></span></td>
             <td class="seq-code">F-155</td>
             <td class="seq-name">Natural Beige Weave</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">15</td>
             <td><span class="seq-swatch" style="background:#7A8054;color:#fff"></span></td>
             <td class="seq-code">F-156</td>
             <td class="seq-name">Dual Tone Green Beige</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           <tr>
             <td class="seq-num">16</td>
             <td><span class="seq-swatch" style="background:#2A4A7A;color:#fff"></span></td>
             <td class="seq-code">F-89</td>
             <td class="seq-name">Ritzy Blue</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">17</td>
+            <td><span class="seq-swatch" style="background:#D4C5A9;color:#555"></span></td>
+            <td class="seq-code">F-51</td>
+            <td class="seq-name">Lewis Beige</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">18</td>
+            <td><span class="seq-swatch" style="background:#E8DFC7;color:#555"></span></td>
+            <td class="seq-code">F-56</td>
+            <td class="seq-name">Cream Weave</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">19</td>
+            <td><span class="seq-swatch" style="background:#C9B89A;color:#555"></span></td>
+            <td class="seq-code">F-65</td>
+            <td class="seq-name">Sandy Beige</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">20</td>
+            <td><span class="seq-swatch" style="background:#8B5E3C;color:#fff"></span></td>
+            <td class="seq-code">F-104</td>
+            <td class="seq-name">Sepia Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">21</td>
+            <td><span class="seq-swatch" style="background:#E8C040;color:#555"></span></td>
+            <td class="seq-code">F-105</td>
+            <td class="seq-name">Canary Yellow</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">22</td>
+            <td><span class="seq-swatch" style="background:#C4AD8A;color:#555"></span></td>
+            <td class="seq-code">F-109</td>
+            <td class="seq-name">Tuscan Beige Quilted</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">23</td>
+            <td><span class="seq-swatch" style="background:#9A9068;color:#555"></span></td>
+            <td class="seq-code">F-117</td>
+            <td class="seq-name">Sage Taupe</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">24</td>
+            <td><span class="seq-swatch" style="background:#BABFC0;color:#555"></span></td>
+            <td class="seq-code">F-118</td>
+            <td class="seq-name">Silver Grey Weave</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">25</td>
+            <td><span class="seq-swatch" style="background:#C08040;color:#fff"></span></td>
+            <td class="seq-code">F-128</td>
+            <td class="seq-name">Caramel Brown</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-tsl">Till Stock Lasts</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">26</td>
+            <td><span class="seq-swatch" style="background:#C8C0B0;color:#555"></span></td>
+            <td class="seq-code">F-130</td>
+            <td class="seq-name">Flecked Natural</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">27</td>
+            <td><span class="seq-swatch" style="background:#E8E0CC;color:#555"></span></td>
+            <td class="seq-code">F-138</td>
+            <td class="seq-name">Cream Weave</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
+          </tr>
+          <tr>
+            <td class="seq-num">28</td>
+            <td><span class="seq-swatch" style="background:#6B9DB8;color:#555"></span></td>
+            <td class="seq-code">F-139</td>
+            <td class="seq-name">Azure Weave</td>
+            <td class="seq-status-cell"><span class="seq-status seq-status-cont">Continued</span></td>
           </tr>
           </tbody>
         </table>
@@ -569,7 +786,7 @@ const MODELS = {
   fabric: [
     // ── SOFAS ──
     {
-      id: "somerset", name: "Somerset/C", type: "3+2", category: "sofa",
+      id: "somerset", name: "Somerset/B", type: "3+2", category: "sofa",
       status: "active",
       inStock: ["F-128"],
       customizable: ["F-58", "F-61"],
